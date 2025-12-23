@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 240 10% 4%;
+  --card: 240 10% 8%;
+  --text: 0 0% 100%;
+}
+
+.light {
+  --bg: 0 0% 100%;
+  --card: 0 0% 96%;
+  --text: 240 10% 4%;
+}
+
+body {
+  background-color: hsl(var(--bg));
+  color: hsl(var(--text));
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.glass {
+  background: hsla(var(--card), 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+}
+
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+}
+
+.animate-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2s infinite;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -100,7 +100,7 @@ export default function Hero() {
               Explore Projects
             </a>
             <a
-              href="/Fish_Resume.pdf"
+              href="/resume.pdf"
               download
               className="px-6 py-3 rounded-xl border border-zinc-700 flex items-center gap-2 hover:bg-zinc-800 transition"
             >
